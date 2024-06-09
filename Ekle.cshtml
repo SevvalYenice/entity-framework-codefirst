@@ -1,0 +1,62 @@
+﻿@using _36504122010.Models.sınıflar
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ekle</title>
+</head>
+<body>
+    
+<h2>Ekle</h2>
+
+@using (Html.BeginForm("Ekle", "Otomobil", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-md-3">Model:</label>
+            <div class="col-md-9">
+                @Html.TextBox("Model", null, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-3">Kodu:</label>
+            <div class="col-md-9">
+                @Html.TextBox("Kodu", null, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-3">Fiyat:</label>
+            <div class="col-md-9">
+                @Html.TextBox("Fiyat", null, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-3">Açıklama:</label>
+            <div class="col-md-9">
+                @Html.TextBox("Açıklama", null, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-3">Satışta Mı?:</label>
+            <div class="col-md-9">
+                @Html.RadioButton("SatistaMi", true)
+                @Html.RadioButton("SatistaMi", false)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <button type="submit" class="btn btn-primary">araç Kaydet</button>
+
+            </div>
+        </div>
+        <a href="/Home/Index" class="btn btn-danger">Geri Dön</a>
+
+    </div>
+}
+</body>
+</html>
